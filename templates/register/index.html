@@ -1,0 +1,148 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <title>60周年的计算机学院</title>
+</head>
+
+<body>
+    <div class='header'>
+        <div class="nav-bar">
+            <div class="title">计算机专业60周年庆</div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="banner">
+            <div class="note">
+                <h2>标题1</h2>
+                <p>
+                    这里是正文,这里是正文,这里是正文,这里是正文,这里是正文, 这里是正文,这里是正文,这里是正文,这里是正文,这里是正文, 这里是正文,这里是正文,这里是正文,这里是正文,
+                </p>
+            </div>
+        </div>
+        <div class="center-panel">
+            <div class="gallery clearfix">
+                <div class="show-panel">
+                    <div class="show-img" style="background-image: url({% static 'image/001.png' %});"></div>
+                    <div class="show-decri">
+                        <p>
+                            哈尔滨工业大学计算机专业创建于1956年，是中国最早的计算机专业之一。在1985年，发展成为计算机科学与工程系，并建立了计算机科学技术研究 所。2000年，计算机科学与技术学院成立；同年，建立了软件学院，后经国家教育部、国家计委批准为国家示范性软件学院。
+                        </p>
+                    </div>
+                </div>
+                <div class="stuff"></div>
+                <div class="show-panel">
+                    <div class="show-img" style="background-image: url({% static 'image/002.png' %});"></div>
+                    <div class="show-decri">
+                        <p>
+                            目前，哈工大计算机科学与技术学 院拥有计算机科学与技术国家一级重点学科、7个博士点和7个硕士点、1个博士后科研流动站、一个国家级教学团队、一个国家级科技创新团队、一个国防科工委 创新研究团队。
+                        </p>
+                    </div>
+                </div>
+                <div class="stuff"></div>
+                <div class="show-panel">
+                    <div class="show-img" style="background-image: url({% static 'image/003.png' %});"></div>
+                    <div class="show-decri">
+                        <p>
+                            学院继承和发扬以陈光熙先生为代表的哈工大计算机人的“光熙精神”，即“规格严格，功夫到家；求实创新，探索进取；诲人不倦，甘为 人梯；追求真理，坦诚待人。”正在努力实现着“办一流学科，出一流成果，建一流基地，育一流人才”的发展战略目标。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro-panel">
+            <div class="intro-title">
+                1min填写，注册回家
+                <p class="fk">
+                    学院的薛瑶同学负责组织大家的留言，图像，视频链接，请使用下面的表单传递同学们的祝愿和反馈
+                </p>
+            </div>
+            <div class="intro-content">
+                <form action="">
+                    <div class="input-group">
+                        <label for="nickname">姓名 Your Name (required)</label>
+                        <input type="text" name="nikcname" class="input" id="nickname">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">毕业年份 Graduate by Year (required)</label>
+                        <input type="text" name="password" class="input" id="password">
+                    </div>
+                    <div class="input-group">
+                        <label for="re-password">现工作单位 Now Working at: (required)</label>
+                        <input type="text" name="re-password" class="input" id="re-password">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">电子邮件 Your Email (required)</label>
+                        <input type="text" name="email" class="input" id="email">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">手机号 Your Mobile (required)</label>
+                        <input type="text" name="phone" class="input" id="phone">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">QQ号码 （optional) </label>
+                        <input type="text" name="phone" class="input" id="phone">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">微信 号码 (optional) </label>
+                        <input type="text" name="phone" class="input" id="phone">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Short words to 60th anniversary </label>
+                        <input type="text" name="phone" class="input" id="phone">
+                    </div>
+                    <div class="">
+                        <label for="id_content">Your Message (long)</label>
+                        <div class="django-ckeditor-widget" data-field-id="id_content">
+                            <textarea id="id_content" name="content" data-processed="0" data-config='{"filebrowserWindowWidth": 940, "toolbar_Basic": [["Source", "-", "Bold", "Italic"]], "language": "zh-cn", "toolbar_Full": [["Styles", "Format", "Bold", "Italic", "Underline", "Strike", "SpellChecker", "Undo", "Redo"], ["Link", "Unlink", "Anchor"], ["Image", "Flash", "Table", "HorizontalRule"], ["TextColor", "BGColor"], ["Smiley", "SpecialChar"], ["Source"]], "filebrowserUploadUrl": "/ckeditor/upload/", "height": 291, "width": 600, "filebrowserBrowseUrl": "/ckeditor/browse/", "skin": "moono", "filebrowserWindowHeight": 725, "toolbar": "Full"}'
+                                data-external-plugin-resources='[]' data-id="id_content" data-type="ckeditortype"></textarea>
+                        </div>
+                    </div>
+                    <button id="submit">提交</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="friend-link clearfix">
+
+            <div class='link-item intro'>
+                <img src="{% static 'image/cs-logo.png' %}" alt="">
+            </div>
+
+            <div class='link-item'>
+                <span class="link-title">友情链接</span>
+                <ul class="link-list">
+                    <li>
+                        <a href="http://www.hit.edu.cn/">哈尔滨工业大学</a>
+                    </li>
+                    <li>
+                        <a href="http://www.ccf.org.cn/">中国计算机协会</a>
+                    </li>
+                    <li>
+                        <a href="http://www.acm.org/">ACM</a>
+                    </li>
+                    <li><a href="http://www.computer.org/portal/web/guest/home">IEEE COMPUTER SOCIETY</a></li>
+                    <li>
+                        <a href="http://www.ifip.or.at/">国际信息处理联合会(ifip)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class='copyright'>
+            <p>
+                版权信息 © 哈尔滨工业大学计算机学院
+            </p>
+            <p>开发者：<a href="https://www.pureweber.com/">PureWeber-纯粹互联网</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
