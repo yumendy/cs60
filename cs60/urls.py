@@ -28,6 +28,11 @@ urlpatterns = [
     url(r'^ckeditor/browse/', ck_views.browse, name='ckeditor_browse'),
 
     url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^login/$', views.LoginView.as_view(), name='login'),
+    url(r'^logout/$', views.LogoutView.as_view(), name='logout'),
+    url(r'^record/list/$', views.RecordListView.as_view(), name='record_list'),
+    url(r'^record/(?P<pk>[0-9]+)/detail/$', views.RecordDetailView.as_view(), name='record_detail'),
+    url(r'^record/csv/$', views.CreateCSVView.as_view(), name='get_csv')
 ]
 
 if settings.DEBUG:

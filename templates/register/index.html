@@ -4,10 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
     <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
     <title>60周年的计算机学院</title>
 </head>
 
@@ -64,38 +65,39 @@
                 </p>
             </div>
             <div class="intro-content">
-                <form action="">
+                <form method="post">
+                    {% csrf_token %}
                     <div class="input-group">
                         <label for="nickname">姓名 Your Name (required)</label>
-                        <input type="text" name="nikcname" class="input" id="nickname">
+                        <input type="text" name="name" class="input" id="nickname" required>
                     </div>
                     <div class="input-group">
                         <label for="password">毕业年份 Graduate by Year (required)</label>
-                        <input type="text" name="password" class="input" id="password">
+                        <input type="number" name="graduate" class="input" id="password" required>
                     </div>
                     <div class="input-group">
                         <label for="re-password">现工作单位 Now Working at: (required)</label>
-                        <input type="text" name="re-password" class="input" id="re-password">
+                        <input type="text" name="unit" class="input" id="re-password" required>
                     </div>
                     <div class="input-group">
                         <label for="email">电子邮件 Your Email (required)</label>
-                        <input type="text" name="email" class="input" id="email">
+                        <input type="email" name="email" class="input" id="email" required>
                     </div>
                     <div class="input-group">
                         <label for="phone">手机号 Your Mobile (required)</label>
-                        <input type="text" name="phone" class="input" id="phone">
+                        <input type="tel" name="phone" class="input" id="phone" required>
                     </div>
                     <div class="input-group">
                         <label for="phone">QQ号码 （optional) </label>
-                        <input type="text" name="phone" class="input" id="phone">
+                        <input type="text" name="im" class="input" id="phone">
                     </div>
                     <div class="input-group">
                         <label for="phone">微信 号码 (optional) </label>
-                        <input type="text" name="phone" class="input" id="phone">
+                        <input type="text" name="wechat" class="input" id="phone">
                     </div>
                     <div class="input-group">
                         <label for="phone">Short words to 60th anniversary </label>
-                        <input type="text" name="phone" class="input" id="phone">
+                        <input type="text" name="short_word" class="input" id="phone">
                     </div>
                     <div class="">
                         <label for="id_content">Your Message (long)</label>
@@ -141,6 +143,7 @@
                 版权信息 © 哈尔滨工业大学计算机学院
             </p>
             <p>开发者：<a href="https://www.pureweber.com/">PureWeber-纯粹互联网</a></p>
+            <p><a href="{% url 'record_list' %}">管理后台</a></p>
         </div>
     </div>
 </body>

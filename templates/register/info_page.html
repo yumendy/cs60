@@ -1,0 +1,17 @@
+{% extends 'register/dashboard_base.html' %}
+
+{% block title %}
+    错误提示
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="col-md-12">
+            <h3 class="text-center text-danger">提示</h3>
+            <div class="well">
+                <p class="text-info">{{ message }}</p>
+                <p><a href="/">返回</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

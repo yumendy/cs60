@@ -1,0 +1,66 @@
+{% extends 'register/dashboard_base.html' %}
+
+{% block title %}
+    寄语详情
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h2 class="text-info text-center">基本信息</h2>
+                <h4 class="text-center"><a href="{% url 'record_list' %}">返回</a></h4>
+                <div class="table-responsive">
+                    <table class="table table-hover table-condensed table-bordered">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>毕业年份</th>
+                                <th>现工作单位</th>
+                                <th>电子邮件</th>
+                                <th>手机号</th>
+                                <th>QQ号</th>
+                                <th>微信号</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ record.name }}</td>
+                                <td>{{ record.graduate }}</td>
+                                <td>{{ record.unit }}</td>
+                                <td>{{ record.email }}</td>
+                                <td>{{ record.phone }}</td>
+                                <td>{{ record.im }}</td>
+                                <td>{{ record.wechat }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">一句话祝语</h3>
+                    </div>
+                    <div class="panel-body">
+                            {{ record.short_word }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">回忆</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>{{ record.content|safe }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
