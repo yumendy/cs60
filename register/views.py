@@ -68,7 +68,7 @@ class LogoutView(RedirectView):
 
 class LoginView(FormView):
     template_name = 'register/login.html'
-    success_url = reverse_lazy('recode_list')
+    success_url = reverse_lazy('record_list')
     form_class = LoginForm
 
     def form_valid(self, form):
